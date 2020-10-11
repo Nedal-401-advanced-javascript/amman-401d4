@@ -1,4 +1,4 @@
-const inquirer = require('inquirer');
+const inquirer = require('inquirer');//this for comand line to accept input 
 
 const io = require('socket.io-client');
 

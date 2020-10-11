@@ -22,10 +22,6 @@ module.exports = (io) => {
                 // send the message to everyone in the currentRoom
                 slick.to(currentRoom).emit('message', payload);
             });
-    
         });
-   
     });
-
-
 }
