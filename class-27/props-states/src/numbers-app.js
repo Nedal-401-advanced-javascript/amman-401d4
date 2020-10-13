@@ -27,7 +27,7 @@ class App extends React.Component {
 
 function Number(props) {
     return (
-        <h1> Number child :  {props.show}</h1>
+        <h1 data-testid="output">{props.show}</h1>
     )
 }
 
@@ -46,7 +46,7 @@ function NumberForm(props) {
     return (
         <form onSubmit={_handleSubmit}>
             <label>NumberForm child</label>
-            <input type="number" onChange={_handleChange} />
+            <input data-testid="num" type="number" onChange={_handleChange} />
         </form>
     )
 }
