@@ -1,0 +1,54 @@
+.overlay {
+    top: 0;
+    right: 0;
+    left:0;
+    bottom:0;
+    z-index: 100;
+    position: absolute;
+
+    &:after {
+        background-color: #0000;
+        opacity: 0.5;
+        position: absolute;
+    }
+    .modal {
+        background: #ccc; 
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        margin: auto;
+        padding: 0;
+        position: relative; 
+        top: 50%;
+        transform: translateY(-50%);
+        width: 300px;
+        z-index: 1000;
+    
+        .title {
+            color: #000;
+            flex: 1;
+        }
+        button {
+            float: right;
+            cursor: pointer;
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+        .header {
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        .content {
+            margin-top : 20px;
+        }
+    }
+
+
+
+}
+
+
