@@ -11,7 +11,7 @@ class Form extends React.Component {
         // loader must show 
         this.props.toggleLoading();
 
-        let raw = await fetch('https://swapi.dev/api/people');
+        let raw = await fetch('https://swapi.dev/api/people/');
         let data = await raw.json();
 
         let count = data.count; 
