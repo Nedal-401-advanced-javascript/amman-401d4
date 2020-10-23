@@ -27,8 +27,9 @@ class HashTable {
         this.entries[hashIndex].append(entry); // LinkedList append method
     }
 
-    get() {
-
+    get(key) {
+        let hashIndex = this.hash(key);
+        return this.entries[hashIndex].value
     }
 
     contains() {
@@ -65,6 +66,19 @@ class LinkedList {
             }
             current.next = node;
         }
+    }
+    getValue(k) {
+        let arr = [];
+        let i = 0;
+        let current = this.head;
+        while (current.next) {
+            arr[i] = current.value;
+            current = current.next;
+            i++;
+        }
+        let valueIndex = arr.length - k
+        return arr[valueIndex]
+
     } 
 }
 
@@ -80,7 +94,7 @@ console.log("-----------------------");
 console.log(myHash.entries[318]);
 console.log("-----------------------");
 
-console.log(myHash.entries[395]);
-console.log(myHash.entries[395].head.value);
-console.log(myHash.entries[395].head.next);
-console.log(myHash.entries[395].head.next.value);
+// console.log(myHash.entries[395]);
+// console.log(myHash.entries[395].head.value);
+// console.log(myHash.entries[395].head.next);
+// console.log(myHash.entries[395].head.next.value);
